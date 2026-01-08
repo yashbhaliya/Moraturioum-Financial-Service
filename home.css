@@ -48,9 +48,17 @@ body {
     cursor: pointer;
 }
 
-.whatsapp { background: #25D366; }
-.facebook { background: #1877F2; }
-.youtube  { background: #FF0000; }
+.whatsapp {
+    background: #25D366;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.youtube {
+    background: #FF0000;
+}
 
 /* NAVBAR */
 .main-header {
@@ -65,7 +73,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-     cursor: pointer;
+    cursor: pointer;
 }
 
 .logo img {
@@ -77,7 +85,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    
+
 }
 
 .nav-container ul li {
@@ -98,7 +106,7 @@ body {
 }
 
 /* Hover underline */
-.nav-container ul li:hover > a {
+.nav-container ul li:hover>a {
     border-bottom: 2px solid #0d8bf2;
 }
 
@@ -123,7 +131,7 @@ body {
     display: none;
     flex-direction: column;
     padding: 8px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -142,7 +150,7 @@ body {
 .services-dropdown a:hover,
 .calculators-dropdown a:hover {
     background: #4C99D1;
-    border-bottom:1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 /* Show dropdown */
@@ -184,7 +192,8 @@ body {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 60vh; /* Controlled height as requested earlier */
+    height: 60vh;
+    /* Controlled height as requested earlier */
 }
 
 .mySlides {
@@ -195,7 +204,8 @@ body {
 .mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents image stretching */
+    object-fit: cover;
+    /* Prevents image stretching */
 }
 
 /* --- TEXT OVERLAY WITH BLUR --- */
@@ -204,12 +214,15 @@ body {
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    
+
     /* Background Blur (Glassmorphism) */
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px);          /* The blur effect */
-    -webkit-backdrop-filter: blur(10px);  /* For Safari support */
-    
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    /* The blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari support */
+
     padding: 40px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -261,12 +274,44 @@ body {
     background: #0b76cc;
     transform: translateY(-2px);
 }
+
+.info-bar {
+    background-color: #4A90E2;
+    /* Matches the blue in your image */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
 /* MOBILE & TABLET VIEW (Up to 1024px) */
-@media (max-width: 1024px) ,(max-width: 767px) {
-    
+@media (max-width: 1024px),
+(max-width: 767px) {
+
     /* 1. Hide the top header or adjust it */
     .top-header {
-        display: none; 
+        display: none;
     }
 
     /* 2. Setup the Nav Container for centering */
@@ -282,20 +327,23 @@ body {
     .menu-toggle {
         display: block;
         font-size: 24px;
-        order: 1; 
-        flex: 1; /* Takes up equal space on the left */
+        order: 1;
+        flex: 1;
+        /* Takes up equal space on the left */
     }
 
     /* 4. Style the Logo (Center) */
     .logo {
         order: 2;
-        flex: 2; /* Takes up more space to stay centered */
+        flex: 2;
+        /* Takes up more space to stay centered */
         display: flex;
         justify-content: center;
     }
 
     .logo img {
-        height: 45px; /* Adjust size for mobile */
+        height: 45px;
+        /* Adjust size for mobile */
         max-width: 100%;
     }
 
@@ -308,24 +356,29 @@ body {
     }
 
     /* 6. Hide the desktop links and button */
-    .nav-container ul, 
+    .nav-container ul,
     .nav-btn {
         display: none;
     }
+
     .nav-container ul {
         display: flex;
         flex-direction: column;
-        position: fixed; /* Stays fixed to the screen */
+        position: fixed;
+        /* Stays fixed to the screen */
         top: 0;
-        left: -300px; /* Hidden by default (pushed left) */
+        left: -300px;
+        /* Hidden by default (pushed left) */
         width: 300px;
         height: 100vh;
         background: #fff;
         z-index: 1001;
-        transition: 0.4s ease; /* Smooth slide effect */
-        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        transition: 0.4s ease;
+        /* Smooth slide effect */
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         padding-top: 20px;
-        align-items: flex-start; /* Align text to left */
+        align-items: flex-start;
+        /* Align text to left */
     }
 
     /* 2. Show the Sidebar when active */
@@ -352,9 +405,10 @@ body {
     }
 
     /* Add a chevron/arrow to the right of items with dropdowns */
-    .nav-container ul li.services ,
-    .nav-container ul li.calculators  {
-        content: "\f054"; /* FontAwesome Chevron Right */
+    .nav-container ul li.services,
+    .nav-container ul li.calculators {
+        content: "\f054";
+        /* FontAwesome Chevron Right */
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         font-size: 14px;
@@ -372,6 +426,95 @@ body {
         color: #333;
         border-bottom: 1px solid #eee;
     }
-    
-    
+
+    /* .slideshow-container { height:20vh; } 
+    .mySlides img { height: 100%; } */
+
+
+    .slideshow-container {
+        height: 20vh !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mySlides,
+    .mySlides img {
+        height: 40vh !important;
+        width: 100%;
+        display: block;
+        /* This prevents the image from looking squashed */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Small Overlay - Centered */
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+
+        width: 80%;
+        max-width: 200px;
+        /* Your requested small width */
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Text scaling for the tiny box */
+    .welcome-text {
+        font-size: 10px;
+        margin-bottom: 4px;
+        color: #000;
+    }
+
+    .text-overlay h1 {
+        font-size: 14px;
+        margin-bottom: 6px;
+        line-height: 1.1;
+    }
+
+    .sub-text {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .inquiry-btn {
+        background-color: #007bff;
+        padding: 8px 15px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;    
+    }
+
+    .blue-info-bar {
+        background-color: #4a90e2; /* Matching the blue in your image */
+        padding: 20px 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .info-content {
+        display: flex;
+        flex-wrap: wrap; /* Allows text to wrap into multiple lines */
+        justify-content: center;
+        gap: 5px 10px;
+        font-size: 12px;
+        /* line-height: 1.6; */
+    }
+
+    .sep {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: lighter;
+    }
+
+
+
 }
