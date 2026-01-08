@@ -103,3 +103,29 @@ function showSlides(n) {
 setInterval(() => {
     plusSlides(1);
 }, 7000);
+
+const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let index = 0;
+
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[i].classList.add("active");
+        dots[i].classList.add("active");
+    }
+
+    function nextSlide() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            index = i;
+            showSlide(index);
+        });
+    });
+
+    setInterval(nextSlide, 4000);
