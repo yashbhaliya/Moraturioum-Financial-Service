@@ -827,135 +827,100 @@ h2 {
     overflow: hidden;
 }
 
-/* --- Form Side --- */
-.contact-form {
-    flex: 1.2;
-    padding: 50px;
+/* --- Main Section Layout --- */
+.contact-section {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.small-title {
-    color: #004aad;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 14px;
-}
-
-.contact-form h2 {
-    font-size: 36px;
-    margin: 10px 0 30px;
-    color: #333333;
-}
-
-/* --- Grid Layout for Inputs --- */
-.form-grid {
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+    grid-template-columns: 1.2fr 1fr; 
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
+/* --- Left Side (Text & Cards) --- */
+.conatect {
+    margin-bottom: 30px;
 }
 
-/* Spanning the full width for specific elements */
-.checkbox, 
-button[type="submit"], 
-.alert {
-    grid-column: span 2;
-}
-
-/* --- Input Styling --- */
-label {
-    margin-bottom: 8px;
-    font-weight: 600;
+.conatect h5 {
+    color: #004aad;
     font-size: 14px;
-    color: black;
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* margin-bottom: 10px; */
+    display: flex  ;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type="text"],
-input[type="email"],
-select {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
+.conatect h3 {
+    font-size: 38px;
+    color: #222;
+    font-weight: 800;
+    margin: 0;
+      display: flex  ;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Info Grid (Inside the left column) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of cards */
+    gap: 20px;
+    /* padding-left: 30px; */
+
+}
+
+.info-card {
+    background: #f8faff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
     transition: all 0.3s ease;
 }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+.info-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 74, 173, 0.1);
+    border-color: #004aad;
 }
 
-/* --- Error States --- */
-.error {
-    color: var(--error-color);
-    font-size: 12px;
-    margin-top: 5px;
-    display: none; /* Hidden by default */
+.info-card i {
+    font-size: 24px;
+    color: #004aad;
+    margin-bottom: 15px;
 }
 
-.alert {
-    background: #ffe5e5;
-    color: var(--error-color);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    display: none; /* Hidden unless form has errors */
+.info-card h3 {
+    font-size: 18px !important; /* Forces smaller size for cards */
+    margin-bottom: 8px;
 }
 
-/* --- Checkbox Styling --- */
-.checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.checkbox input {
-    margin-top: 5px;
-}
-
-.checkbox p {
+.info-card p {
     font-size: 13px;
+    color: #555;
     line-height: 1.5;
-    color: var(--text-light);
 }
 
-/* --- Button --- */
-button[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: var(--transition);
-    text-transform: uppercase;
-}
-
-button[type="submit"]:hover {
-    background-color: #003580;
-    transform: translateY(-2px);
-}
-
-/* --- Image Side --- */
+/* --- Right Side (Image) --- */
 .content-information {
-    flex: 0.8;
     height: 100%;
 }
 
 .content-information img {
     width: 100%;
-    height: 100%;
+    height: 80vh;
     object-fit: cover;
-
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
+
 
 /* --- Footer Base Styling --- */
 .footer {
@@ -1539,56 +1504,85 @@ button[type="submit"]:hover {
         height: 9px;
     }
 
-   .contact-container {
-        flex-direction: column; /* Stack form & image */
-        gap: 30px;
-        padding: 20px;
+  
+    .contact-container {
+        grid-template-columns: 1fr; /* Stack Text and Image vertically */
+        gap: 40px;
+        
     }
 
-    .contact-form {
-        padding: 30px 20px; /* Reduce padding */
+    .conatect {
+        text-align: center; /* Center headings horizontally */
     }
 
-    .form-grid {
-        grid-template-columns: 1fr; /* Single column for inputs */
+    .conatect h5, .conatect h3 {
+        justify-content: center; /* Centers if they are flex items */
+    }
+
+    .conatect h3 {
+        font-size: 30px; /* Scale down the main heading */
+    }
+
+    .info-grid {
+        padding-left: 0; /* Remove desktop-only padding */
         gap: 15px;
     }
 
-    button[type="submit"],
-    .checkbox,
-    .alert {
-        grid-column: span 1; /* Make full width */
-    }
-
-    .contact-form h2 {
-        font-size: 28px; /* Slightly smaller */
-    }
-
-    .small-title {
-        font-size: 12px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select {
-        font-size: 14px;
-        padding: 10px 12px;
-    }
-
-    .content-information {
-        width: 100%;
-        height: 250px; /* Adjust image height for mobile */
-    }
-
     .content-information img {
-        height: 100%;
-    } 
-}
-    
+        height: 450px; /* Reduce large desktop height */
+        border-radius: 15px;
+        /* padding-right: 10px; */
+    }
 
 
 
-@media (max-width: 480px) {
+
+
+    .info-grid {
+        /* Stack cards 1 by 1 */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .info-card {
+        padding: 25px 15px;
+        text-align: center;      /* Center all content inside the card */
+        background: #ffffff;
+        border-radius: 12px;
+        /* Add a slightly stronger shadow for mobile pop */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-card i {
+        font-size: 26px;        /* Slightly larger icons for touch devices */
+        margin-bottom: 12px;
+        color: #004aad;
+    }
+
+    .info-card h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+        font-weight: 700;
+    }
+
+    .info-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #555;
+        /* Prevents long addresses from overflowing */
+        word-wrap: break-word; 
+        max-width: 90%; 
+        margin: 0 auto;
+    }
+
+
+
+
     .stats-section {
         padding: 50px 15px;
         /* Ensure the section relative positioning covers the background */
