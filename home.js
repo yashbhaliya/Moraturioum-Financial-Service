@@ -128,4 +128,45 @@ const slides = document.querySelectorAll(".slide");
         });
     });
 
-    setInterval(nextSlide, 4000);
+    setInterval(nextSlide, 4000);   
+
+    const counters = document.querySelectorAll(".stat-card h3");
+
+    const speed = 250; // smaller = faster
+
+    const startCounter = (counter) => {
+        const target = parseFloat(counter.getAttribute("data-target"));
+        let count = 0;
+
+        const increment = target / speed;
+
+        const updateCount = () => {
+            count += increment;
+
+            if (count < target) {
+                counter.innerText =
+                    Number.isInteger(target)
+                        ? Math.floor(count) + "+"
+                        : count.toFixed(1) + "+";
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target + "+";
+            }
+        };
+
+        updateCount();
+    };
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    counters.forEach(counter => observer.observe(counter));

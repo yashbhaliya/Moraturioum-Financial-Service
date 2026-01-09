@@ -778,15 +778,15 @@ h2 {
 
 /* NUMBER */
 .stat-card h3 {
-    font-size: 34px;
+    font-size: 38px;
     color: #0d8bf2;
     margin-bottom: 8px;
 }
 
 /* LABEL */
 .stat-card span {
-    font-size: 14px;
-    color: #333;
+    font-size: 18px;
+    color: black;
     display: block;
 }
 
@@ -1205,5 +1205,45 @@ h2 {
         width: 9px;
         height: 9px;
     }
+    .stats-content {
+        width: 100%;
+        padding: 0 15px;
+    }
 
+    .stats-content h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .stats-content p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .stats-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .stat-card {
+        padding: 24px 16px;
+        border-radius: 14px;
+    }
+
+    .stat-card img {
+        width: 48px;
+        margin-bottom: 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 28px;
+    }
+
+    .stat-card span {
+        font-size: 16px;
+    }
 }
+    
+
+
+
