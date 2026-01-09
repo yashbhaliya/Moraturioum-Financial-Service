@@ -957,6 +957,181 @@ button[type="submit"]:hover {
 
 }
 
+/* --- Footer Base Styling --- */
+.footer {
+    background-color: #002a66; /* Deep professional blue */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    font-family: sans-serif;
+    text-align: center; /* Centers inline elements and text */
+}
+
+/* --- Footer Top: The Link Columns --- */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the columns horizontally */
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: #ffb703; /* Highlight color */
+}
+
+/* --- Social Icons --- */
+.social {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the "Follow Us" and Icons */
+    gap: 10px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;      /* Forces items to stay side-by-side */
+    align-items: center;      /* Vertically centers text and icons */
+    justify-content: center; /* Horizontally centers the whole group */
+    gap: 12px;               /* Space between text and icons */
+    white-space: nowrap;      /* Prevents text from breaking into two lines */
+    margin: 20px 0;
+}
+
+.social span {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;       /* Extra breathing room after the label */
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #ffb703;     /* Your brand yellow/gold */
+    color: #002a66;          /* Your brand dark blue */
+    transform: scale(1.1);   /* Slight pop effect */
+}
+
+/* --- Description --- */
+.footer-description {
+    max-width: 800px;
+    margin: 0 auto 40px; /* margin auto centers the block */
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+/* --- Footer Bottom: Logo, Contact, Address --- */
+.footer-bottom {
+    display: flex;
+    flex-direction: row;      /* Forces one line */
+    justify-content: center;  /* Centers the whole group */
+    align-items: center;      /* Vertically aligns logo and text */
+    flex-wrap: nowrap;        /* Prevents breaking to new line */
+    gap: 40px;                /* Space between the three sections */
+    padding: 30px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* --- Section Formatting --- */
+.footer-bottom > div {
+    text-align: left;
+}
+
+/* --- Small Size Logo --- */
+.footer-bottom .logo img {
+    max-width: 150px;         /* Kept small to stay inline */
+    height: auto;
+    display: block;
+}
+
+/* --- Typography (Compact View) --- */
+.footer-bottom h4 {
+    color: #ffb703;           /* Accent Gold */
+    font-size: 13px;          /* Small professional size */
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.4;
+    white-space: nowrap;      /* Keeps contact/address on one line */
+}
+
+.copyright {
+    width: 100%;
+    padding:10px ;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    /* margin-top: 20px; */
+}
+
+.copy-right-p {
+    font-size: 12px;         /* Small, elegant size */
+    color: white; /* Slightly faded white for a modern look */
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MOBILE & TABLET VIEW (Up to 1024px) */
 @media (max-width: 768px) {
 
@@ -1364,22 +1539,6 @@ button[type="submit"]:hover {
         height: 9px;
     }
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    .contact-container {
         flex-direction: column; /* Stack form & image */
         gap: 30px;
@@ -1517,5 +1676,74 @@ button[type="submit"]:hover {
         font-weight: 600;
         color: #444;
         text-transform: uppercase;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .footer-links {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    /* 2. STACK THE FOOTER-BOTTOM (Logo, Contact, Address) */
+    .footer-bottom {
+        flex-direction: column; /* Stacks items line-by-line */
+        gap: 30px;
+        padding: 40px 20px;
+        flex-wrap: nowrap;      /* Ensure they don't jump around */
+    }
+
+    .footer-bottom > div {
+        width: 100%;
+        text-align: center;     /* Centers text for each block */
+    }
+
+    /* 3. CONTROL THE ORDER (Logo First) */
+    .footer-bottom .logo {
+        order: 1;               /* Forces Logo to the top */
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom .contact {
+        order: 2;               /* Contact info in the middle */
+    }
+
+    .footer-bottom .address {
+        order: 3;               /* Address at the bottom of this section */
+    }
+
+    /* 4. LOGO IMAGE ADJUSTMENT */
+    .footer-bottom .logo img {
+        margin: 0 auto;         /* Centers image horizontally */
+        max-width: 200px;       /* Makes logo clear on mobile */
+    }
+
+    /* 5. TEXT ADJUSTMENTS FOR MOBILE */
+    .footer-bottom p {
+        white-space: normal;    /* Allows text to wrap so it doesn't overflow */
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .footer-bottom h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #ffb703;
+    }
+
+    /* 6. DESCRIPTION & COPYRIGHT */
+    .footer-description {
+        font-size: 13px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .copyright {
+        padding: 15px;
     }
 }
