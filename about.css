@@ -1,0 +1,902 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+/* TOP HEADER */
+.top-header {
+    background: #0d8bf2;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-left span {
+    margin-right: 20px;
+}
+
+.header-left i {
+    margin-right: 6px;
+}
+
+/* Social icons */
+.header-right a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.youtube {
+    background: #FF0000;
+}
+
+/* NAVBAR */
+.main-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 55px;
+}
+
+/* Menu */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-container ul li {
+    position: relative;
+    margin: 0 14px;
+}
+
+/* NAVBAR TEXT BLACK */
+.nav-container ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Hover underline */
+.nav-container ul li:hover>a {
+    border-bottom: 2px solid #0d8bf2;
+}
+
+/* Arrow */
+.nav-container ul li a i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* DROPDOWNS */
+.services-dropdown,
+.calculators-dropdown {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 280px;
+    background: #0d8bf2;
+    display: none;
+    flex-direction: column;
+    padding: 8px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* DROPDOWN TEXT WHITE */
+.services-dropdown a,
+.calculators-dropdown a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-dropdown a:hover,
+.calculators-dropdown a:hover {
+    background: #4C99D1;
+    border-bottom: 1px solid #fff;
+}
+
+/* Show dropdown */
+.show {
+    display: flex;
+}
+
+/* BUTTON */
+.nav-btn a {
+    background: #0d8bf2;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-btn a:hover {
+    background: #0b76cc;
+}
+
+/* MOBILE VIEW STYLES */
+
+/* Hide the toggle by default on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-menu {
+    display: none;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 60vh;
+    /* Controlled height as requested earlier */
+}
+
+.mySlides {
+    display: none;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Prevents image stretching */
+}
+
+/* --- TEXT OVERLAY WITH BLUR --- */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    /* Background Blur (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    /* The blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari support */
+
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 550px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* --- TEXT STYLING --- */
+.welcome-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.text-overlay h1 {
+    font-size: 36px;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.sub-text {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.sub-text strong {
+    color: black;
+    font-weight: 700;
+}
+
+/* --- BUTTON STYLING --- */
+.inquiry-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0d8bf2;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.inquiry-btn:hover {
+    background: #0b76cc;
+    transform: translateY(-2px);
+}
+/* --- Footer Base Styling --- */
+.footer {
+    background-color: #002a66; /* Deep professional blue */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    font-family: sans-serif;
+    text-align: center; /* Centers inline elements and text */
+}
+
+/* --- Footer Top: The Link Columns --- */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the columns horizontally */
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: #ffb703; /* Highlight color */
+}
+
+/* --- Social Icons --- */
+.social {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the "Follow Us" and Icons */
+    gap: 10px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;      /* Forces items to stay side-by-side */
+    align-items: center;      /* Vertically centers text and icons */
+    justify-content: center; /* Horizontally centers the whole group */
+    gap: 12px;               /* Space between text and icons */
+    white-space: nowrap;      /* Prevents text from breaking into two lines */
+    margin: 20px 0;
+}
+
+.social span {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;       /* Extra breathing room after the label */
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #ffb703;     /* Your brand yellow/gold */
+    color: #002a66;          /* Your brand dark blue */
+    transform: scale(1.1);   /* Slight pop effect */
+}
+
+
+.about-us {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.about-img img {
+    width: 100%;
+    max-height:50vh ;
+
+    height: auto;          /* FULL IMAGE SHOW */
+    display: block;
+}
+.about-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* LEFT IMAGE */
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.about-content {
+    flex: 1.2;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.underline {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0d8bf2;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-content strong {
+    color: #000;
+}
+
+/* BUTTON */
+.contect-us {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #4fa3d1;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.contect-us:hover {
+    background: #0d8bf2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Description --- */
+.footer-description {
+    max-width: 800px;
+    margin: 0 auto 40px; /* margin auto centers the block */
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+/* --- Footer Bottom: Logo, Contact, Address --- */
+.footer-bottom {
+    display: flex;
+    flex-direction: row;      /* Forces one line */
+    justify-content: center;  /* Centers the whole group */
+    align-items: center;      /* Vertically aligns logo and text */
+    flex-wrap: nowrap;        /* Prevents breaking to new line */
+    gap: 40px;                /* Space between the three sections */
+    padding: 30px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* --- Section Formatting --- */
+.footer-bottom > div {
+    text-align: left;
+}
+
+/* --- Small Size Logo --- */
+.footer-bottom .logo img {
+    max-width: 150px;         /* Kept small to stay inline */
+    height: auto;
+    display: block;
+}
+
+/* --- Typography (Compact View) --- */
+.footer-bottom h4 {
+    color: #ffb703;           /* Accent Gold */
+    font-size: 13px;          /* Small professional size */
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.4;
+    white-space: nowrap;      /* Keeps contact/address on one line */
+}
+
+.copyright {
+    width: 100%;
+    padding:10px ;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    /* margin-top: 20px; */
+}
+
+.copy-right-p {
+    font-size: 12px;         /* Small, elegant size */
+    color: white; /* Slightly faded white for a modern look */
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    /* 1. Hide the top header or adjust it */
+    .top-header {
+        display: none;
+    }
+
+    /* 2. Setup the Nav Container for centering */
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    /* 3. Style the Hamburger Menu (Start/Left) */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        order: 1;
+        flex: 1;
+        /* Takes up equal space on the left */
+    }
+
+    /* 4. Style the Logo (Center) */
+    .logo {
+        order: 2;
+        flex: 2;
+        /* Takes up more space to stay centered */
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 45px;
+        /* Adjust size for mobile */
+        max-width: 100%;
+    }
+
+    /* 5. Create a fake spacer for the right side */
+    /* This ensures the logo stays centered and doesn't lean right */
+    .nav-container::after {
+        content: "";
+        flex: 1;
+        order: 3;
+    }
+
+    /* 6. Hide the desktop links and button */
+    .nav-container ul,
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-container ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        /* Stays fixed to the screen */
+        top: 0;
+        left: -300px;
+        /* Hidden by default (pushed left) */
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        z-index: 1001;
+        transition: 0.4s ease;
+        /* Smooth slide effect */
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding-top: 20px;
+        align-items: flex-start;
+        /* Align text to left */
+    }
+
+    /* 2. Show the Sidebar when active */
+    .nav-container ul.active {
+        left: 0;
+    }
+
+    /* 3. Style individual menu items to match your image */
+    .nav-container ul li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-container ul li a {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Add a chevron/arrow to the right of items with dropdowns */
+    .nav-container ul li.services,
+    .nav-container ul li.calculators {
+        content: "\f054";
+        /* FontAwesome Chevron Right */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 14px;
+        color: #999;
+    }
+
+    /* 4. The 'Close' button at the top of the sidebar */
+    .close-menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 15px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+
+    .slideshow-container {
+        height: 20vh !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mySlides,
+    .mySlides img {
+        height: 40vh !important;
+        width: 100%;
+        display: block;
+        /* This prevents the image from looking squashed */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Small Overlay - Centered */
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+
+        width: 80%;
+        max-width: 200px;
+        /* Your requested small width */
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Text scaling for the tiny box */
+    .welcome-text {
+        font-size: 10px;
+        margin-bottom: 4px;
+        color: #000;
+    }
+
+    .text-overlay h1 {
+        font-size: 14px;
+        margin-bottom: 6px;
+        line-height: 1.1;
+    }
+
+    .sub-text {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .inquiry-btn {
+        background-color: #007bff;
+        padding: 8px 15px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .about-container {
+        flex-direction: column; /* Stack image on top of text */
+        gap: 30px;
+        text-align: center;      /* Center all text for mobile */
+    }
+
+    .about-image, .about-content {
+        width: 100%;             /* Ensure both take full width */
+    }
+
+    .about-content h2 {
+        font-size: 28px;         /* Smaller heading for mobile */
+        margin-bottom: 10px;
+    }
+
+    .underline {
+        margin: 0 auto 20px;     /* Centers the underline */
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: #004aad;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* Button Styling */
+    .contect-us {
+        padding: 12px 30px;
+        background-color: #004aad;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .contect-us:hover {
+        background-color: #ffb703;
+        color: #000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     .footer-top {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .footer-links {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    /* 2. STACK THE FOOTER-BOTTOM (Logo, Contact, Address) */
+    .footer-bottom {
+        flex-direction: column; /* Stacks items line-by-line */
+        gap: 30px;
+        padding: 40px 20px;
+        flex-wrap: nowrap;      /* Ensure they don't jump around */
+    }
+
+    .footer-bottom > div {
+        width: 100%;
+        text-align: center;     /* Centers text for each block */
+    }
+
+    /* 3. CONTROL THE ORDER (Logo First) */
+    .footer-bottom .logo {
+        order: 1;               /* Forces Logo to the top */
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom .contact {
+        order: 2;               /* Contact info in the middle */
+    }
+
+    .footer-bottom .address {
+        order: 3;               /* Address at the bottom of this section */
+    }
+
+    /* 4. LOGO IMAGE ADJUSTMENT */
+    .footer-bottom .logo img {
+        margin: 0 auto;         /* Centers image horizontally */
+        max-width: 200px;       /* Makes logo clear on mobile */
+    }
+
+    /* 5. TEXT ADJUSTMENTS FOR MOBILE */
+    .footer-bottom p {
+        white-space: normal;    /* Allows text to wrap so it doesn't overflow */
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .footer-bottom h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #ffb703;
+    }
+
+    /* 6. DESCRIPTION & COPYRIGHT */
+    .footer-description {
+        font-size: 13px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .copyright {
+        padding: 15px;
+    }
+}
