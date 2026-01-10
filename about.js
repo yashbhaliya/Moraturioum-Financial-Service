@@ -71,3 +71,26 @@ document.addEventListener('click', (e) => {
         navList.classList.remove('active');
     }
 });
+
+const cards = document.querySelectorAll(".mv-card");
+
+    cards.forEach(card => {
+        const icon = card.querySelector(".mv-icon");
+        const heading = card.querySelector("h2");
+        const paragraph = card.querySelector("p");
+
+        // Initial state
+        paragraph.style.display = "none";
+
+        card.addEventListener("mouseenter", () => {
+            icon.style.display = "none";
+            heading.style.display = "none";
+            paragraph.style.display = "block";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            icon.style.display = "flex";
+            heading.style.display = "block";
+            paragraph.style.display = "none";
+        });
+    });
