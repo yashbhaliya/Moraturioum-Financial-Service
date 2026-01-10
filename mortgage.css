@@ -18,7 +18,7 @@ body {
     box-shadow: 0 2px 10px rgba(13, 139, 242, 0.3);
     position: relative;
 }
-
+/* 
 .top-header::before {
     content: '';
     position: absolute;
@@ -28,54 +28,52 @@ body {
     bottom: 0;
     background: rgba(255, 255, 255, 0.1);
     pointer-events: none;
-}
+} */
 
 .container {
     width: 95%;
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
+    align-items: center;          /* vertical center */
+    justify-content: space-between; /* left & right separation */
     position: relative;
     z-index: 1;
 }
 
+
 .header-left {
     display: flex;
-    align-items: center;
+    align-items: center;   /* FIX: was align-items: start */
     gap: 20px;
 }
 
 .header-left span {
     display: flex;
     align-items: center;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
-}
-
-.header-left span:hover {
-    opacity: 0.8;
+    gap: 6px;
 }
 
 .header-left i {
-    margin-right: 8px;
-    font-size: 16px;
+    margin-right: 6px;
 }
+
+
 
 /* Social icons */
 .header-right {
     display: flex;
-    align-items: center;
+    align-items: center;     /* FIX: was align-items: end */
+    justify-content: flex-end;
     gap: 10px;
 }
+
 
 .header-right a {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -437,80 +435,6 @@ body {
     object-fit: cover;
     /* fills container, may crop a bit */
     display: block;
-}
-
-.container1 {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-/* Top section: Image + Title/Intro */
-.top-section {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.top-section .image {
-    flex: 1 1 400px;
-    max-width: 500px;
-    height: 40vh;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.top-section .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* full-width and fills container */
-    display: block;
-}
-
-.top-section .content {
-    flex: 2 1 500px;
-}
-
-.top-section .content h2 {
-    margin-top: 0;
-    color: #004aad;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #004aad;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.top-section .content p {
-    margin-bottom: 15px;
-}
-
-/* Bottom section: additional text */
-.bottom-section {
-    margin-top: 30px;
-}
-
-.bottom-section p {
-    margin-bottom: 15px;
-}
-
-/* Button */
-.contact-btn {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-btn:hover {
-    background-color: #357abd;
 }
 
 /* Mortgage page specific styles */
