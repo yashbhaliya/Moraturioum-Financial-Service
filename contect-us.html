@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="loan-transfer.css">
-    <title>Loan Transfer Calculator - Moraturiam Financial Services</title>
+    <link rel="stylesheet" href="contect-us.css">
+    <title>Contact Us - Moraturiam Financial Services</title>
 </head>
 
 <body>
@@ -92,120 +92,54 @@
         </div>
     </header>
 
-    <div class="calculator-img">
-        <img src="/Img/calculator-1.jpg" alt="">
-        <h2>Loan Transfer Calculator</h2>
-    </div>
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="contact-container">
 
+            <section class="contact-info-section">
+                <div class="contact">
+                    <h5>LET'S TALK</h5>
+                    <h3>Get In Touch</h3>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone Number</h3>
+                        <p>+91 848 884 4116</p>
+                    </div>
 
-    <section class="calculator-section">
-        <div class="calculator-container">
+                    <div class="info-card">
+                        <i class="far fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@moratoriumfinserv.com</p>
+                    </div>
 
-            <!-- LEFT SIDE -->
-            <div class="calculator-left">
+                    <div class="info-card">
+                        <i class="far fa-building"></i>
+                        <h3>Office Timing</h3>
+                        <p>10:00 am to 07:00 pm</p>
+                    </div>
 
-                <!-- Example for one field (repeat same pattern) -->
-
-                <div class="field">
-                    <label>Current Loan Amount (₹)</label>
-                    <div class="input-row">
-                        <input type="range" id="loanAmount" min="50000" max="10000000" step="10000" value="100000">
-                        <input type="number" id="loanAmountInput" value="100000">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>A/824, Sun West Bank, Opp. City Gold Cinema, Ashram Road, Ahmedabad, Gujarat-380009</p>
                     </div>
                 </div>
-
-                <div class="field">
-                    <label>Current Interest Rate (%)</label>
-                    <div class="input-row">
-                        <input type="range" id="currentRate" min="1" max="20" step="0.1" value="10">
-                        <input type="number" id="currentRateInput" value="10">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label>Remaining Tenure (Years)</label>
-                    <div class="input-row">
-                        <input type="range" id="currentTenure" min="1" max="30" step="1" value="10">
-                        <input type="number" id="currentTenureInput" value="10">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label>New Bank Interest Rate (%)</label>
-                    <div class="input-row">
-                        <input type="range" id="newRate" min="1" max="20" step="0.1" value="9">
-                        <input type="number" id="newRateInput" value="9">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label>New Bank Tenure (Years)</label>
-                    <div class="input-row">
-                        <input type="range" id="newTenure" min="1" max="30" step="1" value="10">
-                        <input type="number" id="newTenureInput" value="10">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label>One-Time Cost (Fees)</label>
-                    <div class="input-row">
-                        <input type="range" id="fees" min="0" max="200000" step="1000" value="0">
-                        <input type="number" id="feesInput" value="0">
-                    </div>
-                </div>
-
-
+            </section>
+            <div class="content-information">
+                <img src="/Img/content-information.jpg" alt="">
             </div>
-
-            <!-- RIGHT SIDE -->
-            <div class="calculator-right">
-                <h3>Loan Transfer Results</h3>
-
-                <div class="result-row">
-                    <span>Current EMI:</span>
-                    <strong id="currentEmi">₹0</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>New EMI:</span>
-                    <strong id="newEmi">₹0</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>Monthly Savings:</span>
-                    <strong id="monthlySavings">₹0</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>Net Benefits:</span>
-                    <strong id="netBenefits">₹0</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>One-Time Cost (Fees):</span>
-                    <strong id="feesResult">₹0</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>Gross Benefits:</span>
-                    <strong id="grossBenefits">₹0</strong>
-                </div>
-                <button class="apply-btn">APPLY NOW</button>
-            </div>
-
         </div>
-    </section>
+    </div>
 
     <section class="cta-section">
         <div class="cta-container">
             <div class="cta-text">
                 <h3>Have questions or need help finding the <span>right loan?</span></h3>
-                <p>
-                    Call us and our team will guide you to the best financial solution—at no extra cost.<br>
-                    We're here to help, not to lend.
-                </p>
+                <p>Get accurate EMI calculations and plan your loan repayments.</p>
             </div>
-            <a href="#" class="cta-btn">Apply Now</a>
+            <a href="#" class="cta-btn">Get Started</a>
         </div>
     </section>
 
@@ -213,22 +147,22 @@
         <div class="footer-top">
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">→ Home</a></li>
-                    <li><a href="#">→ About Us</a></li>
+                    <li><a href="home.html">→ Home</a></li>
+                    <li><a href="about.html">→ About Us</a></li>
                     <li><a href="#">→ Calculators</a></li>
-                    <li><a href="#">→ Contact Us</a></li>
+                    <li><a href="contect-us.html">→ Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">→ Mortgage Loan</a></li>
-                    <li><a href="#">→ Business Loan</a></li>
+                    <li><a href="mortgage.html">→ Mortgage Loan</a></li>
+                    <li><a href="business.html">→ Business Loan</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">→ EMI Calculator</a></li>
-                    <li><a href="#">→ Loan Transfer Calculator</a></li>
+                    <li><a href="loan-transfer.html">→ Loan Transfer Calculator</a></li>
+                    <li><a href="emi.html">→ EMI Calculator</a></li>
                 </ul>
                 <div class="social">
                     <span>FOLLOW US :</span>
@@ -266,7 +200,7 @@
     </div>
 
 </body>
-<script src="loan-transfer.js"></script>
+<script src="contect-us.js"></script>
 
 
 </html>
