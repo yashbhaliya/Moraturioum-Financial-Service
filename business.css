@@ -171,7 +171,7 @@ body {
     top: 42px;
     left: 0;
     width: 280px;
-    background: #0d8bf2;
+    background: white;
     display: none;
     flex-direction: column;
     padding: 8px 0;
@@ -179,22 +179,23 @@ body {
     z-index: 1000;
 }
 
-/* DROPDOWN TEXT WHITE */
+/* DROPDOWN TEXT BLUE */
 .services-dropdown a,
 .calculators-dropdown a {
-    color: #fff;
-    padding: 12px 20px;
+    color: #0D8BF2;
+    padding: 12px 20px 12px 10px;
     text-decoration: none;
     font-size: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .services-dropdown a:hover,
 .calculators-dropdown a:hover {
-    background: #4C99D1;
-    border-bottom: 1px solid #fff;
+    background: #0d8bf2;
+    color: white;
 }
 
 /* Show dropdown */
