@@ -361,34 +361,51 @@ body {
     color: #002a66;          /* Your brand dark blue */
     transform: scale(1.1);   /* Slight pop effect */
 }
-
-
 .about-us {
     width: 100%;
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* IMAGE WRAPPER */
 .about-img {
     position: relative;
     width: 100%;
-    max-width: 100%;
-
-    border-radius: 20px;
+    height: 350px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease;
 }
 
+/* IMAGE */
 .about-img img {
     width: 100%;
-    max-height:50vh ;
-
-    height: auto;          /* FULL IMAGE SHOW */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
+
+/* OVERLAY TEXT */
+.about-img h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* OPTIONAL DARK OVERLAY */
+.about-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+
 .about-section {
     padding: 80px 0;
     background: #fff;
