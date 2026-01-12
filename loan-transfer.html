@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <link rel="stylesheet" href="loan-transfer.css">
     <title>Loan Transfer Calculator - Moraturiam Financial Services</title>
 </head>
@@ -92,7 +92,119 @@
         </div>
     </header>
 
+    <div class="calculator-img">
+        <img src="/Img/calculator-1.jpg" alt="">
+        <h2>Loan Transfer Calculator</h2>
+    </div>
 
+
+    <section class="calculator-section">
+        <div class="calculator-container">
+
+            <!-- LEFT SIDE -->
+            <div class="calculator-left">
+
+                <!-- Example for one field (repeat same pattern) -->
+
+                <div class="field">
+                    <label>Current Loan Amount (₹)</label>
+                    <div class="input-row">
+                        <input type="range" id="loanAmount" min="50000" max="10000000" step="10000" value="100000">
+                        <input type="number" id="loanAmountInput" value="100000">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Current Interest Rate (%)</label>
+                    <div class="input-row">
+                        <input type="range" id="currentRate" min="1" max="20" step="0.1" value="10">
+                        <input type="number" id="currentRateInput" value="10">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Remaining Tenure (Years)</label>
+                    <div class="input-row">
+                        <input type="range" id="currentTenure" min="1" max="30" step="1" value="10">
+                        <input type="number" id="currentTenureInput" value="10">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>New Bank Interest Rate (%)</label>
+                    <div class="input-row">
+                        <input type="range" id="newRate" min="1" max="20" step="0.1" value="9">
+                        <input type="number" id="newRateInput" value="9">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>New Bank Tenure (Years)</label>
+                    <div class="input-row">
+                        <input type="range" id="newTenure" min="1" max="30" step="1" value="10">
+                        <input type="number" id="newTenureInput" value="10">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>One-Time Cost (Fees)</label>
+                    <div class="input-row">
+                        <input type="range" id="fees" min="0" max="200000" step="1000" value="0">
+                        <input type="number" id="feesInput" value="0">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="calculator-right">
+                <h3>Loan Transfer Results</h3>
+
+                <div class="result-row">
+                    <span>Current EMI:</span>
+                    <strong id="currentEmi">₹0</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>New EMI:</span>
+                    <strong id="newEmi">₹0</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Monthly Savings:</span>
+                    <strong id="monthlySavings">₹0</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Net Benefits:</span>
+                    <strong id="netBenefits">₹0</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>One-Time Cost (Fees):</span>
+                    <strong id="feesResult">₹0</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Gross Benefits:</span>
+                    <strong id="grossBenefits">₹0</strong>
+                </div>
+                <button class="apply-btn">APPLY NOW</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-text">
+                <h3>Ready to Transfer Your Loan? <span>Contact Us Today!</span></h3>
+                <p>Get expert advice on loan transfers and save on interest.</p>
+            </div>
+            <a href="#" class="cta-btn">Get Started</a>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-top">
