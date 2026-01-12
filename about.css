@@ -645,6 +645,11 @@ body {
     width: 500px;
     border-radius: 22px;
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.mv-card:hover {
+    transform: translateY(-8px);
 }
 
 /* IMAGE */
@@ -662,6 +667,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+}
+
+.mv-card:hover .mv-overlay {
+    background: rgba(0, 110, 180, 0.5);
 }
 
 /* CENTER BOX */
@@ -866,6 +876,14 @@ body {
 
 @media (max-width: 768px) {
 
+       .about-img {
+        height: 220px;
+    }
+
+    .about-img h2 {
+        font-size: 35px;
+        text-align: center;
+    }
     /* 1. Hide the top header or adjust it */
     .top-header {
         display: none;
